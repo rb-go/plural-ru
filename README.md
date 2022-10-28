@@ -32,7 +32,7 @@ func main() {
     log.Println(121, plural.Noun(121, "день", "дня", "дней"))
 
     cnt := 100500
-    log.Println(plural.Verb(cnt, "нашелся", "нашлись", "нашлось"), cnt, plural.Noun(cnt, "день", "дня", "дней"))
+    log.Println(plural.Verb(cnt, "нашелся", "нашлись", "нашлось"), cnt, plural.Noun(cnt, "идея", "идеи", "идей"))
 }
 ```
 
