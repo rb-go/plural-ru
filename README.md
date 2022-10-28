@@ -7,7 +7,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/rb-go/plural-ru/badge.svg)](https://coveralls.io/github/rb-go/plural-ru)
 [![license](https://img.shields.io/github/license/rb-go/plural-ru.svg)](LICENSE)
 
-Package Pluralization of russian words for golang
+Package Pluralization of russian words for golang with generics for `int | int32 | int64 | uint | uint32 | uint64` types
 
 ## Usage
 

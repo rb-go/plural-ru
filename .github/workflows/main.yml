@@ -17,10 +17,10 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
-      - name: Set up Go ${{ matrix.go }}
+      - name: Set up Go ${{ matrix.go-version }}
         uses: actions/setup-go@v3
         with:
-          go-version: ${{ matrix.go }}
+          go-version: ${{ matrix.go-version }}
 
       - run: go version
 
@@ -38,11 +38,11 @@ jobs:
         uses: shogo82148/actions-goveralls@v1
         with:
           path-to-profile: profile.cov
-          flag-name: Go-${{ matrix.go }}
+          flag-name: Go-${{ matrix.go-version }}
           parallel: true
   
       # - name: test
-      #   run: goveralls -service=github -parallel -flagname="Unit-${{ matrix.os }}-Go-${{ matrix.go }}"
+      #   run: goveralls -service=github -parallel -flagname="Unit-${{ matrix.os }}-Go-${{ matrix.go-version }}"
       #   working-directory: src/github.com/mattn/goveralls
       #   env:
       #     COVERALLS_TOKEN: ${{ github.token }}
