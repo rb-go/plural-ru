@@ -8,27 +8,25 @@ type Number interface {
 // Noun function to make pluralization for noun
 func Noun[n Number](num n, oneWord, twoWord, ThreeWord string) string {
 	switch getNounPluralForm(num) {
-	case 0:
-		return oneWord
 	case 1:
 		return twoWord
 	case 2:
 		return ThreeWord
+	default:
+		return oneWord
 	}
-	return ""
 }
 
 // Verb function to make pluralization for verb
 func Verb[n Number](num n, oneWord, twoWord, ThreeWord string) string {
 	switch getVerbPluralForm(num) {
-	case 0:
-		return oneWord
 	case 1:
 		return twoWord
 	case 2:
 		return ThreeWord
+	default:
+		return oneWord
 	}
-	return ""
 }
 
 func getNounPluralForm[n Number](a n) int {
