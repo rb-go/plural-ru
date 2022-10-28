@@ -48,6 +48,16 @@ func Test_Plural_Verb_100500(t *testing.T) {
 	assert.Equal(t, "нашлось", plu)
 }
 
+func Test_Plural_Verb_10001000(t *testing.T) {
+	plu := plural.Verb(10001000, "нашелся", "нашлись", "нашлось")
+	assert.Equal(t, "нашлось", plu)
+}
+
+func Test_Plural_Verb_10005000(t *testing.T) {
+	plu := plural.Verb(10005000, "нашелся", "нашлись", "нашлось")
+	assert.Equal(t, "нашлось", plu)
+}
+
 func Test_Plural_Phrase_100500(t *testing.T) {
 	cnt := 100500
 	plu := fmt.Sprint(plural.Verb(cnt, "нашелся", "нашлись", "нашлось"), " ", cnt, " ", plural.Noun(cnt, "идея", "идеи", "идей"))
