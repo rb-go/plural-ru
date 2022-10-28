@@ -43,13 +43,13 @@ func Test_Plural_Verb_1234(t *testing.T) {
 	assert.Equal(t, "нашлись", plu)
 }
 
-func Test_Plural_Verb_100500(t *testing.T) {
-	plu := plural.Verb(100500, "нашелся", "нашлись", "нашлось")
-	assert.Equal(t, "нашлось", plu)
+func Test_Plural_Verb_101000(t *testing.T) {
+	plu := plural.Verb(101000, "нашлась", "нашлись", "нашлось")
+	assert.Equal(t, "нашлась", plu)
 }
 
-func Test_Plural_Verb_10001000(t *testing.T) {
-	plu := plural.Verb(10001000, "нашелся", "нашлись", "нашлось")
+func Test_Plural_Verb_100500(t *testing.T) {
+	plu := plural.Verb(100500, "нашелся", "нашлись", "нашлось")
 	assert.Equal(t, "нашлось", plu)
 }
 
